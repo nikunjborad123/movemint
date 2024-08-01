@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 z-[9999] transition-colors duration-300 ${
+        className={`fixed left-0 right-0 z-[999] transition-colors duration-300 ${
           isScrolled ? "backdrop-blur-md" : "bg-transparent"
         }`}
       >
@@ -44,9 +44,9 @@ const Header = () => {
             className="w-36 lg:w-48 xl:w-72"
           />
           <nav className="hidden md:block space-x-7 lg:space-x-16 xl:space-x-32 text-white">
-            <Link href="/" className="hover:text-black transition-colors">Home</Link>
-            <Link href="/about" className="hover:text-black transition-colors">About</Link>
-            <Link href="/contact" className="hover:text-black transition-colors">Contact Us</Link>
+            <Link href="/" className=" transition-colors">Home</Link>
+            <Link href="/about" className=" transition-colors">About</Link>
+            <Link href="/contact" className=" transition-colors">Contact Us</Link>
           </nav>
           <div className="hidden md:flex space-x-4">
             <Link href="/signup">
@@ -88,7 +88,7 @@ const Header = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-black text-white transform ${
+        className={`fixed z-[9999] top-0 left-0 h-full w-64 bg-black text-white transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out z-50`}
       >
