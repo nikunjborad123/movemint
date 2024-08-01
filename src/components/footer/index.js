@@ -3,6 +3,8 @@ import Image from "next/image";
 import FacebookIcon from "../icons/facebook-icon";
 import InstagramIcon from "../icons/instagram-icon";
 import TwitterIcon from "../icons/twitter-icon";
+import GooglePlayImg from "../../../public/assets/images/google-play.png";
+import PlayStoreImg from "../../../public/assets/images/play-store.png";
 
 const FooterSection = ({ title, links }) => (
   <div className="space-y-4 xl:space-y-10">
@@ -97,13 +99,13 @@ const Footer = () => {
               </p>
               <div className="flex space-x-4 justify-center lg:justify-start">
                 <Image
-                  src="/assets/images/google-play.png"
+                  src={GooglePlayImg}
                   alt="Google Play"
                   width={142}
                   height={46}
                 />
                 <Image
-                  src="/assets/images/play-store.png"
+                  src={PlayStoreImg}
                   alt="Play Store"
                   width={142}
                   height={46}

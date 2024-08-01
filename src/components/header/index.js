@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Logo from "../../../public/assets/images/logo.png";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -36,7 +37,7 @@ const Header = () => {
       >
         <div className="container mx-auto flex items-center justify-between px-6 py-4 md:py-8 lg:py-10 xl:py-16">
           <Image
-            src="/assets/images/logo.png"
+            src={Logo}
             alt="Movemint Logo"
             width={285}
             height={40}
