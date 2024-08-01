@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed left-0 right-0 transition-colors duration-300 ${
+        className={`fixed left-0 right-0 z-[9999] transition-colors duration-300 ${
           isScrolled ? "backdrop-blur-md" : "bg-transparent"
         }`}
       >
