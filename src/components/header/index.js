@@ -1,19 +1,40 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+    document.body.classList.toggle('overflow-hidden', !isSidebarOpen);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <header className="fixed left-0 right-0">
-        <div className="container mx-auto flex items-center justify-between px-6 py-16">
+      <header
+        className={`fixed left-0 right-0 transition-colors duration-300 ${
+          isScrolled ? "backdrop-blur-md" : "bg-transparent"
+        }`}
+      >
+        <div className="container mx-auto flex items-center justify-between px-6 py-4 md:py-8 lg:py-10 xl:py-16">
           <Image
             src="/assets/images/logo.png"
             alt="Movemint Logo"
