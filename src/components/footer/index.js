@@ -14,7 +14,10 @@ const FooterSection = ({ title, links }) => (
     <ul className="space-y-2 xl:space-y-4">
       {links.map((link, index) => (
         <li key={index}>
-          <a href={link.href} className="text-white xl:text-xl">
+          <a
+            href={link.href}
+            className="text-white xl:text-xl hover:text-branded-blue"
+          >
             {link.label}
           </a>
         </li>
@@ -66,7 +69,12 @@ const Footer = () => {
 
           <nav
             aria-label="Footer Navigation"
-            className="flex flex-col md:flex-row text-center lg:text-left space-y-8 md:space-y-0 md:space-x-24 lg:space-x-8 xl:space-x-24"
+            className="
+    flex flex-row justify-between gap-6 items-center
+    md:flex-row md:space-x-6 md:space-y-0
+    lg:space-x-8
+    xl:space-x-24
+  "
           >
             <FooterSection title="Company" links={companyLinks} />
             <FooterSection title="Contact" links={contactLinks} />

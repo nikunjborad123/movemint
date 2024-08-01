@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const Header = () => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    document.body.classList.toggle('overflow-hidden', !isSidebarOpen);
+    document.body.classList.toggle("overflow-hidden", !isSidebarOpen);
   };
 
   const handleScroll = () => {
@@ -35,7 +35,7 @@ const Header = () => {
           isScrolled ? "backdrop-blur-md" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto flex items-center justify-between px-6 py-4 md:py-8 lg:py-10 xl:py-16">
+        <div className="container mx-auto flex items-center justify-between px-6 py-4 md:py-6 lg:py-6 xl:py-8">
           <Image
             src={Logo}
             alt="Movemint Logo"
@@ -44,13 +44,13 @@ const Header = () => {
             className="w-36 lg:w-48 xl:w-72"
           />
           <nav className="hidden md:block space-x-7 lg:space-x-16 xl:space-x-32 text-white">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/" className="hover:text-black transition-colors">Home</Link>
+            <Link href="/about" className="hover:text-black transition-colors">About</Link>
+            <Link href="/contact" className="hover:text-black transition-colors">Contact Us</Link>
           </nav>
           <div className="hidden md:flex space-x-4">
             <Link href="/signup">
-              <span className="text-white border border-white px-3 lg:px-5 xl:px-7 py-2 lg:py-3 rounded-md hover:bg-white hover:text-blue-500 text-md lg:text-lg transition-all">
+              <span className="text-white border border-white px-3 lg:px-5 xl:px-7 py-2 lg:py-3 rounded-md hover:bg-white hover:text-black text-md lg:text-lg transition-all">
                 Sign up
               </span>
             </Link>
