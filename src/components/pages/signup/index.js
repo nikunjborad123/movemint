@@ -1,7 +1,8 @@
+import React from "react";
 import Checkbox from "@/components/checkbox";
 import Input from "@/components/input";
-import Image from "next/image";
-import React from "react";
+import Image from "next/image"
+import CaptchaImg from '../../../../public/assets/images/recaptcha-logo.png';
 
 const SignUp = () => {
   return (
@@ -177,12 +178,12 @@ const SignUp = () => {
                     id="privacy"
                     label="Click to Verify"
                     className="h-12 w-12"
-                    labelClassName="text-black"
+                    labelClassName="!text-black"
                   />
                 </div>
                 <div className="p-6 bg-[#09224B]">
                   <Image
-                    src="/assets/images/recaptcha-logo.png"
+                    src={CaptchaImg}
                     alt="recaptcha"
                     height={64}
                     width={64}
