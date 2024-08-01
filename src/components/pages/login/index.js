@@ -6,6 +6,7 @@ import GooglePlayImg from "../../../../public/assets/images/google-play.png";
 import PlayStoreImg from "../../../../public/assets/images/play-store.png";
 import AppleIcon from "@/components/icons/apple-icon";
 import GoogleIcon from "@/components/icons/google-icon";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -34,9 +35,9 @@ const Login = () => {
         </form>
         <div className="text-center text-sm text-white">
           Or if you don&apos;t have an account,{" "}
-          <a href="#" className="text-white">
+          <Link href="/signup" className="text-white">
             click here to create one
-          </a>
+          </Link>
         </div>
         <div className="flex justify-center items-center space-x-4">
           <p className="text-xs text-white">- Or sign in using -</p>
